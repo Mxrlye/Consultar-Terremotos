@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Terremotos</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: "Times New Roman", serif;
+            background-color: #fce4ec;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Contenedor principal */
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 500px; /* Ancho aumentado */
+            text-align: center;
+        }
+
+        /* Título */
+        h1 {
+            color: #474445;
+        }
+
+        
+        label {
+            font-weight: bold;
+            color: #312f30;
+        }
+
+        input[type="date"] {
+            padding: 8px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            width: calc(100% - 20px);
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #a1e0eb;
+            color: #0f0e0e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ec407a;
+        }
+        .PiP{
+            font-size: 12px;
+            color: #333;
+            position:absolute;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Terremotos</h1>
+        <form action="consulta.php" method="post">
+            <label for="start_date">Fecha Inicio:</label>
+            <input type="date" id="start_date" name="start_date" required>
+            <br>
+            <label for="end_date">Fecha Fin:</label>
+            <input type="date" id="end_date" name="end_date" required>
+            <br>
+            <input type="submit" value="Buscar">
+        </form>
+        <p class="PieP">Elaborado por: Marlene</p>
+    </div>
+</body>
+</html>
+
